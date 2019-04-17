@@ -1,0 +1,63 @@
+<!doctype html> <!-- lck.html -->
+<html><head><meta charset="utf-8"/><meta name="viewport"content="width=device-width,initial-scale=1"/>
+<title>폼 과제</title>
+<script>
+function team(obj) {
+var name_a = ["Smeb 송경호", "kingen 황성훈", "Score 고동빈", "UmTi 엄성현", "Bdd 곽보성", "Gango 변세훈", "Zenit 전태권", "SnowFlower 노희종", "Mia 최상인"];
+var name_b = ["CuVee 이성진", "Roach 김강희", "Peanut 한왕호", "Fly 송용준", "Ruler 박재혁", "Life 김정민"];
+var name_c = ["Khan 김동하", "Crazy 김재희", "clid 김태민", "Haru 강민승", "Faker 이상혁", "Teddy 박진성", "Leo 한겨레", "Mata 조세형", "Effort 이상호"];
+var name_d = ["Lindarang 허만흥", "TaNa 이상욱", "Malrang 김근성", "Seize 김찬희", "Grace 이찬주", "CheonGo 최현우", "Stitch 이승주", "Route 문검수", "Nova 박찬호", "Kellin 김형규"];
+var name_e = ["Rascal 김광희", "Cuzz 문우찬", "Pawn 허원석", "Naehyun 유내현", "Deft 김혁규", "TusiN 박종익"];
+var name_f = ["SoHwan 김준영", "Thal 박권혁", "Moojin 김무진", "bonO 김기범", "Lava 김태훈", "Tempt 강명구", "Sangyoon 권상윤", "clever 문원희", "Key 김한기", "Asper 김태기"];
+var name_g = ["Kiin 김기인", "Brook 이장훈", "Spirit 이다윤", "Dread 이진혁", "Ucal 손우현", "SSUN 김태양", "Aimining 김하람", "SSol 서진솔", "Jelly 손호경", "Senan 박희석"];
+var name_h = ["Sword 최성원", "Tarzan 이승용", "Kanavi 서진혁", "Chovy 정지훈", "Viper 박도현", "Lehends 손시우", "Kabbie 정상현"];
+var name_i = ["Nuguri 장하권", "Flame 이호종", "Punch 손민혁", "Canyon 김건부", "ShowMaker 허수", "Nuclear 신정현", "Aries 이채환", "Hoit 류호성", "BeryL 조건희"]
+var name_j=["Wizer 최의석", "Summit 박우태", "Crush 김준서", "OnFleek 김장겸", "Dove 김재연", "Justice 윤석준","Hollow 신용진", "Ghost 장용준", "Joker 조재읍", "Totoro 은종섭"];
+
+var target = document.getElementById("namex");
+ if(obj.value == "a") var k = name_a;
+else if(obj.value == "b") var k = name_b;
+else if(obj.value == "c") var k = name_c;
+else if(obj.value == "d") var k = name_d;
+else if(obj.value == "e") var k = name_e;
+else if(obj.value == "f") var k = name_f;
+else if(obj.value == "g") var k = name_g;
+else if(obj.value == "h") var k = name_h;
+else if(obj.value == "i") var k = name_i;
+else if(obj.value == "j") var k = name_j;
+
+ 
+  target.options.length = 0;
+ 
+  for (x in k) {
+    var opt = document.createElement("option");
+    opt.value = k[x];
+    opt.innerHTML = k[x];
+    target.appendChild(opt);
+    }
+    }
+    </script>
+    
+</head>
+<body>
+<section>
+<fieldset>
+<legend>LCK Spring 2round Roster</legend>
+<label for="teamx">TEAM</label>
+<select id="teamx" name="volleyballteam" onchange ="team(this)">
+<option value="a"selected>kt Rolster</option>
+<option value="b">Gen.G</option>
+<option value="c">SK telecom T1</option>
+<option value="d">Jin air Green Wings</option>
+<option value="e">King-Zone Dragon X</option>
+<option value="f">Hanwha Life e-sports</option>
+<option value="g">Afreeca Freecs</option>
+<option value="h">Griffin</option>
+<option value="i">DAMWON GAMING</option>
+<option value="j">SANDBOX GAMING</option>
+</select>
+
+<label for="name">NAME</label>
+<select id="namex" name="name"></select>
+</fieldset></section>
+</body></html>
